@@ -1,0 +1,482 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes cosmicGlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes stepGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(236, 150, 17, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(236, 150, 17, 0.5);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes gradient-xy {
+  0%, 100% {
+    background-size: 400% 400%;
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.hero-image {
+  opacity: 0.8;
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(56, 7, 30, 0.7) 0%,
+    rgba(56, 7, 30, 0.85) 50%,
+    rgba(56, 7, 30, 0.95) 100%
+  );
+}
+
+.cosmic-guarantee {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(56, 7, 30, 0.95) 0%,
+    rgba(42, 5, 23, 0.98) 100%
+  );
+  overflow: hidden;
+}
+
+.cosmic-guarantee::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(236, 150, 17, 0.15),
+    rgba(147, 51, 234, 0.15),
+    transparent 70%
+  );
+  animation: cosmicGlow 15s ease infinite;
+  filter: blur(30px);
+  transform: translateZ(0);
+}
+
+.cosmic-guarantee::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(236, 150, 17, 0.1),
+    transparent 70%
+  );
+  filter: blur(20px);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ec9611, #e879f9);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+.glow-step {
+  position: relative;
+  animation: stepGlow 2s ease-in-out infinite;
+}
+
+.glowing-text {
+  text-shadow: 0 0 10px rgba(236, 150, 17, 0.5);
+  letter-spacing: 0.5px;
+}
+
+.services-slider {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.5s ease;
+}
+
+.services-slider:hover {
+  animation-play-state: paused;
+}
+
+.service-card {
+  min-width: 320px;
+  background: rgba(56, 7, 30, 0.5);
+  backdrop-filter: blur(10px);
+  margin-right: 1rem;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(236, 150, 17, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.process-step {
+  position: relative;
+}
+
+.process-step::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -50%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #ec9611 0%, transparent 100%);
+  transform: translateY(-50%);
+}
+
+.process-step:last-child::after {
+  display: none;
+}
+
+body {
+  @apply antialiased;
+  padding-top: 4rem;
+  background: linear-gradient(
+    135deg,
+    #38071e 0%,
+    #2a0517 50%,
+    #38071e 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  background-color: #38071e;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply tracking-tight;
+}
+
+.guarantee-badge {
+  background: linear-gradient(145deg, #ec9611, #d88610);
+  animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite;
+}
+
+.testimonial-card {
+  background: rgba(56, 7, 30, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(236, 150, 17, 0.1);
+}
+
+.video-feature {
+  background: linear-gradient(145deg, rgba(58, 7, 30, 0.9), rgba(42, 5, 23, 0.95));
+  border: 2px solid rgba(236, 150, 17, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-mt-16 {
+  scroll-margin-top: 4rem;
+}
+
+.cosmic-glow {
+  background: linear-gradient(
+    135deg,
+    rgba(56, 7, 30, 0.95) 0%,
+    rgba(42, 5, 23, 0.98) 100%
+  );
+  position: relative;
+}
+
+.cosmic-glow::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(236, 150, 17, 0.15),
+    rgba(147, 51, 234, 0.15),
+    transparent 70%
+  );
+  animation: cosmicGlow 15s ease infinite;
+  filter: blur(30px);
+  transform: translateZ(0);
+}
+
+.cosmic-glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(236, 150, 17, 0.1),
+    transparent 70%
+  );
+  filter: blur(20px);
+}
+
+.text-glow {
+  text-shadow: 
+    0 0 10px rgba(236, 150, 17, 0.3),
+    0 0 20px rgba(236, 150, 17, 0.3),
+    0 0 30px rgba(236, 150, 17, 0.3);
+  animation: textPulse 3s ease-in-out infinite;
+}
+
+@keyframes textPulse {
+  0%, 100% {
+    text-shadow: 
+      0 0 10px rgba(236, 150, 17, 0.3),
+      0 0 20px rgba(236, 150, 17, 0.3),
+      0 0 30px rgba(236, 150, 17, 0.3);
+  }
+  50% {
+    text-shadow: 
+      0 0 15px rgba(236, 150, 17, 0.6),
+      0 0 25px rgba(236, 150, 17, 0.6),
+      0 0 35px rgba(236, 150, 17, 0.6);
+  }
+}
+
+.bg-glow {
+  background: radial-gradient(
+    circle at center,
+    rgba(236, 150, 17, 0.15) 0%,
+    rgba(56, 7, 30, 0.2) 50%,
+    transparent 70%
+  );
+  filter: blur(40px);
+  animation: bgPulse 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes bgPulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.glow-text {
+  text-shadow: 
+    0 0 10px rgba(236, 150, 17, 0.3),
+    0 0 20px rgba(236, 150, 17, 0.2),
+    0 0 30px rgba(236, 150, 17, 0.1);
+  animation: textGlow 2s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: 
+      0 0 10px rgba(236, 150, 17, 0.3),
+      0 0 20px rgba(236, 150, 17, 0.2),
+      0 0 30px rgba(236, 150, 17, 0.1);
+  }
+  50% {
+    text-shadow: 
+      0 0 15px rgba(236, 150, 17, 0.4),
+      0 0 25px rgba(236, 150, 17, 0.3),
+      0 0 35px rgba(236, 150, 17, 0.2);
+  }
+}
+
+/* Add these new animation classes */
+.reveal-element {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+.reveal-element.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Update the reveal animation for testimonials */
+.testimonial-card.reveal-element {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+.testimonial-card.reveal-element.reveal {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Add a staggered delay for testimonials */
+.testimonial-card:nth-child(1) { transition-delay: 0.3s; }
+.testimonial-card:nth-child(2) { transition-delay: 0.6s; }
+.testimonial-card:nth-child(3) { transition-delay: 0.9s; }
+
+/* Add a subtle hover effect for testimonials */
+.testimonial-card {
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.animate-gradient-xy {
+  animation: gradient-xy 15s ease infinite;
+}
+
+/* Optional: Add a pulse effect to the button */
+@keyframes pulse-glow {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.2);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Update the button styles to ensure they're not being overridden */
+.booking-button {
+  position: relative;
+  z-index: 20;
+  background: #38071e;
+  transition: all 0.3s ease;
+}
+
+.booking-button-glow {
+  position: absolute;
+  inset: -4px;
+  background: linear-gradient(to right, #ec9611, #f3b545, #ec9611);
+  border-radius: 0.5rem;
+  filter: blur(8px);
+  opacity: 0.75;
+  transition: all 0.3s ease;
+}
+
+.booking-button-glow:hover {
+  opacity: 1;
+  filter: blur(12px);
+}
+
+.curved-underline {
+  position: relative;
+  white-space: nowrap;
+}
+
+.curved-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: -2px;
+  right: -2px;
+  height: 2px;
+  background: #ec9611;
+  transform: rotate(-0.5deg);
+  opacity: 0.9;
+  border-radius: 999px;
+  filter: blur(0.5px);
+  animation: wiggle 10s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-0.5deg); }
+  50% { transform: rotate(0.5deg); }
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+.bg-gradient-glow {
+  background: linear-gradient(45deg, #ec9611, #d88610);
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: relative;
+  z-index: 1;
+}
+
+.bg-gradient-glow::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: inherit;
+  filter: blur(10px);
+  opacity: 0.7;
+  z-index: -1;
+}
