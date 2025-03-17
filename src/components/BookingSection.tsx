@@ -28,7 +28,7 @@ const BookingSection = () => {
                            flex items-center justify-center gap-3 hover:scale-105 shadow-2xl
                            transition-transform duration-300"
                 >
-                  Book a Free Intro Call
+                  Book My Free Call
                   <ArrowRight className="w-6 h-6" />
                 </button>
               </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Globe, BarChart3, Calendar, Megaphone } from 'lucide-react';
+import { Globe, BarChart3, Calendar, Megaphone, Search, Video } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 type Tab = {
@@ -12,6 +12,26 @@ type Tab = {
 };
 
 const tabs: Tab[] = [
+  {
+    id: 'ai',
+    icon: <Calendar className="w-5 h-5" />,
+    title: 'AI Appointment Setter',
+    header: 'Fully Automate Bookings & Save 6-8+ Hours Weekly ⏳',
+    description: `Our AI-powered system warms up, pre-qualifies, and books high-value renovation clients directly into your calendar—eliminating manual sales calls and no-shows.
+
+Why High-End Renovation Companies Love This:
+
+✅ Save 6-8+ hours per week – No more chasing leads or confirming appointments.
+
+✅ 2.5x Higher Scheduling Rate – AI engages, qualifies, and books clients with zero drop-off.
+
+✅ No Need for Sales Reps – AI sounds human, handles objections, and knows your business inside out.
+
+✅ 100% Automated Follow-Ups – AI double-dial calls, SMS, and email reminders to ensure clients actually show up.
+
+🚀 Traditional sales teams lose 30-35% of bookings—our AI automates 99% of scheduling with no drop-off. Let AI fill your calendar while you focus on high-value projects!`,
+    image: '/ai.jpg'
+  },
   {
     id: 'website',
     icon: <Globe className="w-5 h-5" />,
@@ -33,6 +53,8 @@ Why Our Websites Outperform Others:
 
 ✅ SEO That Drives Leads – Optimized for search rankings and conversion, ensuring more prospects find and book you.
 
+✅ High-Converting VSLs – Engaging video sales letters that address pain points, build trust, and position your business as the only solution—turning viewers into booked clients.
+
 💰 Most agencies keep clients dependent on them for ongoing web work—we help you break free. Get a high-performing site you control and watch your leads grow!`,
     image: '/construction_website.jpg'
   },
@@ -51,26 +73,6 @@ Why Our Websites Outperform Others:
 
 🚀 Most agencies stop at leads—we turn them into revenue.`,
     image: '/handsome-young-man-working-laptop-smiling-while-sitting-sidewalk-cafe_231208-12079.avif'
-  },
-  {
-    id: 'ai',
-    icon: <Calendar className="w-5 h-5" />,
-    title: 'AI Appointment Setter',
-    header: 'Fully Automate Bookings & Save 6-8+ Hours Weekly ⏳',
-    description: `Our AI-powered system warms up, pre-qualifies, and books high-value renovation clients directly into your calendar—eliminating manual sales calls and no-shows.
-
-Why High-End Renovation Companies Love This:
-
-✅ Save 6-8+ hours per week – No more chasing leads or confirming appointments.
-
-✅ 2.5x Higher Scheduling Rate – AI engages, qualifies, and books clients with zero drop-off.
-
-✅ No Need for Sales Reps – AI sounds human, handles objections, and knows your business inside out.
-
-✅ 100% Automated Follow-Ups – AI double-dial calls, SMS, and email reminders to ensure clients actually show up.
-
-🚀 Traditional sales teams lose 30-35% of bookings—our AI automates 99% of scheduling with no drop-off. Let AI fill your calendar while you focus on high-value projects!`,
-    image: '/ai.jpg'
   },
   {
     id: 'ads',
@@ -115,7 +117,7 @@ const TabsSection: React.FC = () => {
         {/* Section Header */}
         <div ref={headerRef} className="text-center mb-16 reveal-element">
           <h2 className="text-4xl font-bold mb-4">
-            Our <span className="text-[#ec9611]">4-Step System</span> to Get You More High-Value Clients
+            The Proven <span className="text-[#ec9611]">4-Step System</span> to Break Free & Scale Your Business
           </h2>
           <p className="text-white max-w-2xl mx-auto">
             A proven framework that consistently delivers premium renovation leads and booked appointments
@@ -123,15 +125,16 @@ const TabsSection: React.FC = () => {
         </div>
 
         {/* Desktop Tabs */}
-        <div ref={tabsRef} className="hidden md:flex justify-center space-x-4 mb-12 sticky top-20 z-50 bg-[#2a0517]/95 py-4 backdrop-blur-sm reveal-element">
+        <div ref={tabsRef} className="hidden md:flex justify-center space-x-2 md:space-x-4 mb-12 sticky top-20 z-50 bg-[#2a0517]/95 py-2 md:py-4 backdrop-blur-sm reveal-element">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => handleTabClick(tab.id)}
               className={`
-                flex items-center px-6 py-3 rounded-lg 
+                flex items-center px-2 md:px-6 py-2 md:py-3 rounded-lg 
                 transition-all duration-300 ease-in-out
                 transform hover:scale-105 active:scale-95
+                text-sm md:text-base
                 ${activeTab === tab.id 
                   ? 'bg-[#ec9611] text-white shadow-lg' 
                   : 'bg-[#38071e] text-white hover:bg-[#ec9611]/20'
@@ -140,7 +143,7 @@ const TabsSection: React.FC = () => {
                 cursor-pointer select-none relative
               `}
             >
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-1 md:space-x-2">
                 {tab.icon}
                 <span className="whitespace-nowrap font-medium">{tab.title}</span>
               </div>
@@ -148,36 +151,37 @@ const TabsSection: React.FC = () => {
           ))}
         </div>
 
+        {/* Mobile Tabs */}
+        <div className="block md:hidden mb-8 w-full sticky top-20 z-50 bg-[#2a0517]/95 py-2 backdrop-blur-sm">
+          <div className="grid grid-cols-2 gap-2 px-2">
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => handleTabClick(tab.id)}
+                className={`
+                  flex items-center px-3 py-2 rounded-lg w-full
+                  transition-all duration-300 ease-in-out
+                  active:scale-95 select-none
+                  text-xs
+                  ${activeTab === tab.id 
+                    ? 'bg-[#ec9611] text-white shadow-lg' 
+                    : 'bg-[#38071e] text-white hover:bg-[#ec9611]/20'
+                  }
+                  focus:outline-none focus:ring-2 focus:ring-[#ec9611]/50
+                  cursor-pointer break-words
+                `}
+              >
+                <div className="flex items-center space-x-1 w-full">
+                  {tab.icon}
+                  <span className="font-medium text-left flex-1">{tab.title}</span>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+
         {/* Content Layout */}
         <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 relative z-10">
-          {/* Mobile Tabs */}
-          <div className="block md:hidden mb-8 w-full sticky top-20 z-50 bg-[#2a0517]/95 py-4 backdrop-blur-sm">
-            <div className="grid grid-cols-1 gap-2">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => handleTabClick(tab.id)}
-                  className={`
-                    flex items-center px-4 py-4 rounded-lg w-full
-                    transition-all duration-300 ease-in-out
-                    active:scale-95 select-none
-                    ${activeTab === tab.id 
-                      ? 'bg-[#ec9611] text-white shadow-lg' 
-                      : 'bg-[#38071e] text-white hover:bg-[#ec9611]/20'
-                    }
-                    focus:outline-none focus:ring-2 focus:ring-[#ec9611]/50
-                    cursor-pointer break-words
-                  `}
-                >
-                  <div className="flex items-center space-x-3 w-full">
-                    {tab.icon}
-                    <span className="font-medium text-left flex-1">{tab.title}</span>
-                  </div>
-                </button>
-              ))}
-            </div>
-          </div>
-
           {/* Image Section */}
           <div ref={imageRef} className="order-1 md:order-none reveal-element">
             <div className="relative h-[300px] md:h-[400px] rounded-xl overflow-hidden shadow-2xl transition-all duration-500">
