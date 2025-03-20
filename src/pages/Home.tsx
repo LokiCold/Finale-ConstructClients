@@ -37,31 +37,47 @@ const Home = () => {
       />
       
       {/* Hero Section */}
-      <header ref={heroRef} className="reveal-element relative min-h-[80vh] flex items-start bg-[#38071e] z-0 pt-4 md:pt-0">
+      <header ref={heroRef} className="reveal-element relative min-h-[80vh] flex items-center justify-center bg-[#38071e] z-0 pt-4 md:pt-0 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 w-full h-full z-0 opacity-40 flex items-center justify-center">
+          <img 
+            src="/Untitled design.svg" 
+            alt="Background" 
+            className="w-auto min-w-[120%] md:min-w-[110%] h-auto min-h-[100%] object-cover object-center"
+            style={{
+              filter: 'drop-shadow(0 0 20px rgba(236, 150, 17, 0.2))'
+            }}
+          />
+        </div>
+        
         {/* Content */}
         <div className="container mx-auto px-4 relative z-10 mt-16 lg:mt-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
-            {/* Left side - Text Content */}
-            <div className="max-w-3xl text-center md:text-left relative pt-4 md:pt-8 order-2 md:order-1">
-              <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 leading-tight animate-fadeIn relative z-10">
-                Luxury Renovation Clients on Autopilot
-                <br />
-                <span className="block text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl my-2">
+          <div className="flex flex-col items-center md:items-start max-w-3xl mx-auto md:mx-0">
+            {/* Text Content */}
+            <div className="text-center md:text-left relative pt-4 md:pt-8 z-20">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight animate-fadeIn relative">
+                <span className="bg-[#38071e]/40 px-2 py-1 rounded backdrop-blur-sm inline-block">
+                  Luxury Renovation Clients on Autopilot
+                </span>
+                <div className="h-4"></div>
+                <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl my-2">
                   –
                 </span>
-                <span className="block text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl">
+                <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl bg-[#38071e]/40 px-2 py-1 rounded backdrop-blur-sm inline-block">
                   More Projects, Zero Hassle.
                 </span>
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl mb-8 md:mb-12 text-[#ec9611] animate-fadeIn relative z-10">
+              
+              <p className="text-lg sm:text-xl md:text-2xl mb-8 md:mb-12 text-[#ec9611] animate-fadeIn relative bg-[#38071e]/60 px-2 py-1 rounded backdrop-blur-sm inline-block">
                 We bridge the gap between no clients and booked appointments for high-end <span className="font-bold">home Renovation</span> & <span className="font-bold">Construction companies</span>.{' '}
                 <span className="curved-underline">US-based only</span>
               </p>
+              
               {/* Book My Call Button */}
-              <div className="flex justify-center md:justify-start gap-6 animate-fadeIn mb-12 md:mb-24 relative z-50">
+              <div className="flex justify-center md:justify-start gap-6 animate-fadeIn mb-12 md:mb-24 relative">
                 <button 
                   onClick={openCalendlyPopup}
-                  className="bg-[#ec9611] hover:bg-[#d88610] text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-base rounded-lg font-semibold flex items-center justify-center gap-2 transition-all transform hover:scale-105 shadow-lg"
+                  className="bg-[#ec9611] hover:bg-[#d88610] text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-base rounded-lg font-semibold flex items-center justify-center gap-2 transition-all transform hover:scale-105 shadow-lg z-20"
                 >
                   Book My Free Call
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -69,9 +85,9 @@ const Home = () => {
               </div>
 
               {/* Floating Guarantee Text */}
-              <div className="w-full max-w-none sm:max-w-2xl animate-float relative z-0">
+              <div className="w-full max-w-none sm:max-w-2xl animate-float relative z-10">
                 <div className="absolute inset-0 bg-glow rounded-3xl -z-10"></div>
-                <div className="relative z-0 p-4 sm:p-8">
+                <div className="relative p-4 sm:p-8 bg-[#38071e]/70 backdrop-blur-md rounded-3xl shadow-xl">
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 text-glow text-center md:text-left">
                     The Only Risk-Free Offer in the Industry!
                   </h3>
@@ -83,18 +99,6 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-            </div>
-
-            {/* Right side - Hero Image */}
-            <div className="relative flex items-center justify-center z-0 order-1 md:order-2 mt-8 md:mt-0 mx-auto">
-              <img 
-                src="/Untitled design.svg" 
-                alt="Construction Hero" 
-                className="w-full md:w-auto max-w-[90%] md:max-w-full h-auto md:h-[450px] lg:h-[500px] xl:h-[550px] object-contain animate-fadeIn mx-auto relative"
-                style={{
-                  filter: 'drop-shadow(0 0 20px rgba(236, 150, 17, 0.2))'
-                }}
-              />
             </div>
           </div>
         </div>
