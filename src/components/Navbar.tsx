@@ -22,7 +22,7 @@ const Navbar = ({ scrollToVideo, scrollToBooking, scrollToTestimonials, scrollTo
       <div className="container mx-auto px-4 relative">
         <div className="flex justify-between items-center h-20">
           {/* Logo Container */}
-          <div className="flex items-center gap-12">
+          <div className="flex md:items-center md:gap-12 w-full md:w-auto justify-center md:justify-start">
             {/* Main Logo */}
             <div className="h-[50px] flex items-center">
               <img 
@@ -32,11 +32,11 @@ const Navbar = ({ scrollToVideo, scrollToBooking, scrollToTestimonials, scrollTo
               />
             </div>
             {/* Second Logo */}
-            <div className="h-[40px] hidden md:flex items-center">
+            <div className="h-[140px] hidden md:flex items-center -my-8">
               <img 
                 src="/2-LOGO.png" 
                 alt="Name Logo" 
-                className="h-full w-auto object-contain scale-[1.0]"
+                className="h-full w-auto object-contain scale-[3.2] brightness-150 contrast-125 saturate-125"
               />
             </div>
           </div>
