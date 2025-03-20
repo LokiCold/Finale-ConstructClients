@@ -1,0 +1,3 @@
+html, body { overflow-x: hidden; width: 100%; position: relative; max-width: 100vw; }
+@media (max-width: 640px) { .container { padding-left: 0.5rem !important; padding-right: 0.5rem !important; max-width: 100% !important; } }
+@media (max-width: 640px) { .grid { margin-left: 0 !important; margin-right: 0 !important; } h1, h2, h3, p { max-width: 100%; word-wrap: break-word; } }
