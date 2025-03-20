@@ -19,24 +19,24 @@ const Navbar = ({ scrollToVideo, scrollToBooking, scrollToTestimonials, scrollTo
 
   return (
     <nav className="fixed w-full z-[100] bg-[#38071e] shadow-lg">
-      <div className="container mx-auto px-1 sm:px-4 relative">
+      <div className="container mx-auto px-4 relative">
         <div className="flex justify-between items-center h-20">
           {/* Logo Container */}
-          <div className="flex items-center gap-3 sm:gap-6 md:gap-12">
+          <div className="flex items-center gap-12">
             {/* Main Logo */}
-            <div className="h-[40px] sm:h-[50px] flex items-center">
+            <div className="h-[50px] flex items-center">
               <img 
                 src="/Untitled design (5).svg" 
                 alt="ConstructClients.ai Logo" 
-                className="h-full w-auto object-contain scale-[1.2] sm:scale-[1.5]"
+                className="h-full w-auto object-contain scale-[1.5]"
               />
             </div>
             {/* Second Logo */}
-            <div className="h-[60px] sm:h-[100px] md:h-[140px] flex items-center -my-3 sm:-my-6 md:-my-10 overflow-visible">
+            <div className="h-[40px] hidden md:flex items-center">
               <img 
                 src="/2-LOGO.png" 
                 alt="Name Logo" 
-                className="h-full w-auto object-contain scale-[4.0] sm:scale-[5.5] md:scale-[7.0] brightness-150 contrast-125 saturate-125"
+                className="h-full w-auto object-contain scale-[1.0]"
               />
             </div>
           </div>
