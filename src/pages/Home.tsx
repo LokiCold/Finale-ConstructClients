@@ -40,7 +40,7 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen text-white">
+    <div className="min-h-screen text-white overflow-x-hidden">
       <Navbar 
         scrollToVideo={scrollToVideo} 
         scrollToBooking={openCalendlyPopup} 
@@ -51,7 +51,7 @@ const Home = () => {
       {/* Hero Section */}
       <header ref={heroRef} className="reveal-element relative min-h-[80vh] flex items-start bg-[#38071e] z-0 pt-4 md:pt-0">
         {/* Content */}
-        <div className="container mx-auto px-4 relative z-10 mt-16 lg:mt-20">
+        <div className="container mx-auto px-2 sm:px-4 relative z-10 mt-16 lg:mt-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
             {/* Left side - Text Content */}
             <div className="max-w-3xl text-center md:text-left relative pt-4 md:pt-8 order-2 md:order-1">
@@ -118,7 +118,7 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left side - Video */}
             <div className="video-feature rounded-xl p-6">
-              <h2 className="text-4xl font-bold mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4">
                 How We <span className="text-[#ec9611]">Fill the Gap</span>
               </h2>
               <p className="text-gray-300 mb-8">
@@ -134,12 +134,12 @@ const Home = () => {
             </div>
 
             {/* Right side - Problem Statement */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <div>
-                <h2 className="text-4xl font-bold mb-4">
+                <h2 className="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4">
                   The Hidden Problem <span className="text-[#ec9611]">Stealing Your Time, Money & Future</span>
                 </h2>
-                <p className="text-xl text-gray-300 mb-8">
+                <p className="text-lg sm:text-xl text-gray-300 mb-4 sm:mb-8">
                   Does This Sound Familiar?
                 </p>
               </div>
