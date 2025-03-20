@@ -32,11 +32,11 @@ const Navbar = ({ scrollToVideo, scrollToBooking, scrollToTestimonials, scrollTo
               />
             </div>
             {/* Second Logo */}
-            <div className="h-[60px] sm:h-[100px] md:h-[140px] flex items-center -my-2 sm:-my-4 md:-my-8 overflow-visible">
+            <div className="h-[60px] sm:h-[100px] md:h-[140px] flex items-center -my-3 sm:-my-6 md:-my-10 overflow-visible">
               <img 
                 src="/2-LOGO.png" 
                 alt="Name Logo" 
-                className="h-full w-auto object-contain scale-[2.5] sm:scale-[3.2] md:scale-[4.0] brightness-150 contrast-125 saturate-125"
+                className="h-full w-auto object-contain scale-[4.0] sm:scale-[5.5] md:scale-[7.0] brightness-150 contrast-125 saturate-125"
               />
             </div>
           </div>
