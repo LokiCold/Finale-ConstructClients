@@ -152,7 +152,7 @@ const TabsSection: React.FC = () => {
         </div>
 
         {/* Mobile Tabs */}
-        <div className="block md:hidden mb-8 w-full fixed top-[4rem] left-0 right-0 z-[100] bg-[#2a0517] py-2 shadow-lg sticky top-20 z-50 bg-[#2a0517]/95 py-2 backdrop-blur-sm">
+        <div className="block md:hidden mb-8 w-full fixed top-[5rem] left-0 right-0 z-[99] bg-[#2a0517] py-2 shadow-lg sticky top-20 z-50 bg-[#2a0517]/95 py-2 backdrop-blur-sm">
         {/* Add spacing to compensate for fixed tabs on mobile */}
         <div className="block md:hidden h-16"></div>
           <div className="grid grid-cols-2 gap-2 px-2">

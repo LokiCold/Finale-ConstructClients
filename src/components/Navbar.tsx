@@ -18,7 +18,7 @@ const Navbar = ({ scrollToVideo, scrollToBooking, scrollToTestimonials, scrollTo
   };
 
   return (
-    <nav className="fixed w-full z-[100] bg-[#38071e] shadow-lg">
+    <nav className="fixed w-full z-[200] bg-[#38071e] shadow-lg">
       <div className="container mx-auto px-4 relative">
         <div className="flex justify-between items-center h-20">
           {/* Logo Container */}
