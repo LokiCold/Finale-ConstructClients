@@ -66,7 +66,7 @@ const Home = () => {
                 </span>
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl mb-8 md:mb-12 text-[#ec9611] animate-fadeIn relative z-10">
-                We bridge the gap between no clients and booked appointments for high-end <span className="font-bold">home Renovation</span> & <span className="font-bold">Construction companies</span>.{' '}
+                We bridge the gap between no clients and booked appointments for high-end <span className="font-bold">home Renovation</span> & <span className="font-bold">extension companies</span>.{' '}
                 <span className="curved-underline">US-based only</span>
               </p>
               {/* Book My Call Button */}
@@ -101,7 +101,7 @@ const Home = () => {
             <div className="relative hidden sm:flex items-center justify-center z-0 order-1 md:order-2 mt-8 md:mt-0 mx-auto">
               <img 
                 src="/Untitled design.svg" 
-                alt="Construction Hero" 
+                alt="Extension Hero" 
                 className="w-full md:w-auto max-w-[90%] md:max-w-full h-auto md:h-[450px] lg:h-[500px] xl:h-[550px] object-contain animate-fadeIn mx-auto relative"
                 style={{
                   filter: 'drop-shadow(0 0 20px rgba(236, 150, 17, 0.2))'
@@ -118,7 +118,7 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left side - Video */}
             <div className="video-feature rounded-xl p-6">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4">
+              <h2 className="text-4xl font-bold mb-4">
                 How We <span className="text-[#ec9611]">Fill the Gap</span>
               </h2>
               <p className="text-gray-300 mb-8">
@@ -139,7 +139,7 @@ const Home = () => {
                 <h2 className="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4">
                   The Hidden Problem <span className="text-[#ec9611]">Stealing Your Time, Money & Future</span>
                 </h2>
-                <p className="text-lg sm:text-xl text-gray-300 mb-4 sm:mb-8">
+                <p className="text-lg sm:text-xl text-gray-300 mb-4 sm:mb-6">
                   Does This Sound Familiar?
                 </p>
               </div>
