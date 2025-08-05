@@ -126,7 +126,7 @@ const Home = () => {
               </p>
               <div className="relative aspect-video rounded-lg overflow-hidden">
                 <wistia-player 
-                  media-id="0804d3mffu" 
+                  media-id="pxwusypvyc" 
                   aspect="1.7777777777777777"
                   className="w-full h-full"
                 ></wistia-player>
