@@ -125,8 +125,9 @@
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #ec9611, #e879f9);
+  background: linear-gradient(to right, #8B2A4A 0%, #8B2A4A 12%, #A03A5A 18%, #ec9611 45%, #FFA500 55%, #FFA500 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   font-weight: bold;
 }
@@ -197,6 +198,10 @@ body {
   background-color: #38071e;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
 }
 
 @keyframes gradientBG {

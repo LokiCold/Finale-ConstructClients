@@ -58,9 +58,14 @@ const FAQSection: React.FC = () => {
   return (
     <section className="py-20 bg-[#38071e]">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-4">
-          Frequently Asked Questions <span className="text-[#ec9611]">🤔</span>
-        </h2>
+        <div className="text-center mb-6 animate-float relative">
+          <div className="absolute inset-0 bg-glow rounded-3xl -z-10 opacity-50"></div>
+          <div className="relative z-0">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-glow mb-4">
+              <span className="bg-gradient-to-r from-[#ec9611] via-[#FFA500] to-[#ec9611] bg-clip-text text-transparent">Frequently Asked Questions</span> <span className="text-[#ec9611]">🤔</span>
+            </h2>
+          </div>
+        </div>
         <p className="text-center text-gray-300 mb-16 max-w-2xl mx-auto">
           Get answers to common questions about our services and process
         </p>

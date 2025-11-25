@@ -53,8 +53,6 @@ Why Our Websites Outperform Others:
 
 ✅ SEO That Drives Leads – Optimized for search rankings and conversion, ensuring more prospects find and book you.
 
-✅ High-Converting VSLs – Engaging video sales letters that address pain points, build trust, and position your business as the only solution—turning viewers into booked clients.
-
 💰 Most agencies keep clients dependent on them for ongoing web work—we help you break free. Get a high-performing site you control and watch your leads grow!`,
     image: '/construction_website.jpg'
   },
@@ -116,9 +114,14 @@ const TabsSection: React.FC = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div ref={headerRef} className="text-center mb-16 reveal-element">
-          <h2 className="text-4xl font-bold mb-4">
-            The Proven <span className="text-[#ec9611]">4-Step System</span> to Break Free & Scale Your Business
-          </h2>
+          <div className="animate-float relative mb-6">
+            <div className="absolute inset-0 bg-glow rounded-3xl -z-10 opacity-50"></div>
+            <div className="relative z-0">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-glow mb-4">
+                Break free & <span className="bg-gradient-to-r from-[#ec9611] via-[#FFA500] to-[#ec9611] bg-clip-text text-transparent">scale your business</span>
+              </h2>
+            </div>
+          </div>
           <p className="text-white max-w-2xl mx-auto">
             A proven framework that consistently delivers premium renovation leads and booked appointments
           </p>

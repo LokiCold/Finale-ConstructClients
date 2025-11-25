@@ -9,9 +9,14 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div ref={headerRef} className="text-center mb-16 reveal-element">
-          <h2 className="text-4xl font-bold mb-4">
-            <span className="text-[#ec9611]">Testimonials</span>
-          </h2>
+          <div className="animate-float relative mb-6">
+            <div className="absolute inset-0 bg-glow rounded-3xl -z-10 opacity-50"></div>
+            <div className="relative z-0">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-glow mb-4">
+                <span className="bg-gradient-to-r from-[#ec9611] via-[#FFA500] to-[#ec9611] bg-clip-text text-transparent">Testimonials</span>
+              </h2>
+            </div>
+          </div>
           <p className="text-white max-w-2xl mx-auto">
             Here's what renovation company owners say about our services
           </p>
